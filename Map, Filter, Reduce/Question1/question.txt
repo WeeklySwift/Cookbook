@@ -1,0 +1,1 @@
+I have a list of orders. Every order contains a list of payments. I need to find the sum of all payments and penalties.
