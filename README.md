@@ -1,5 +1,4 @@
 # Cookbook
-The repository containing questions and answers that were discussed on the meetups.
 
 ##How to use this repository:
 This is a catalog of questions and coresponding answers that are gouped by subject.
