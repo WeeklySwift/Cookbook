@@ -1,0 +1,1 @@
+Can someone show me an example on how to use guard in Swift?
