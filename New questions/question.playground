@@ -1,0 +1,16 @@
+Часто возникает проблема, когда используется метод, доступный только в новых iOS. В objective-c я люблю делать вилки через respondsToSelector.
+Например,
+if ([UIFont respondsToSelector(@selector(systemFontOfSize:weight:))]) {
+    font = [UIFont systemFontOfSize:20 weight:UIFontWeightLight];
+}
+else {
+    font = [UIFont fontWithName:@"HelveticaNeue-Light" size:20];
+}
+В свифте компилятор предлагает неудобное #available(iOS 8.2, *)
+if #available(iOS 8.2, *) {
+    font = UIFont.systemFontOfSize(20, weight: UIFontWeightLight)
+} else {
+    font = UIFont(name: "HelveticaNeue-Light", size: 20)!
+}
+то есть предлагается запоминать, в какаой iOS какой функционал появился или был отменён.
+Есть подход для более читаемого условия вилки? И правильно ли я понимаю, что вся ответственность за безопасность вызова методов ложится на плечи компилятора, который должен предлагать вставлять #available?
